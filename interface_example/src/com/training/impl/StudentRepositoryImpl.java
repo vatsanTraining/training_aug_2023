@@ -7,7 +7,7 @@ public class StudentRepositoryImpl implements StudentRepository {
 	
 	private Student[] students;
 	
-	private static final int MAX=5;
+	private static final int MAX=2;
 	
 	private int idxPos = 0;
 	
@@ -43,14 +43,27 @@ public class StudentRepositoryImpl implements StudentRepository {
 
 	@Override
 	public boolean remove(int key) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public double findAverageMark() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		double average = 0.0;
+	    double classTotal = 0.00;
+		for(Student eachStudent : this.students) {
+			
+			double eachStudTotal = 0;
+			  for(double[] inner : eachStudent.getMarkScoredPerYear()) {
+				  
+				  for(double mark : inner) {
+					  eachStudTotal =eachStudTotal+ mark;
+				  }
+			  }
+			  classTotal = classTotal+eachStudTotal;
+		}
+		 
+		return classTotal/idxPos;
 	}
 
 

@@ -1,5 +1,5 @@
 package com.training;
-
+import java.util.*;
 import com.training.ifaces.CrudRepository;
 import com.training.impl.StudentRepositoryImpl;
 import com.training.model.Student;
@@ -13,17 +13,24 @@ public class StudentApplication {
 		
 		StudentRepositoryImpl repo =(StudentRepositoryImpl)obj;
 		
+		double[][] marks1 = { {10,20,30},
+	             {40,50,60},
+	             {70,80,90}
+	             };
 
+		double[][] marks2 = { {30,40,50},
+	             {60,70,60},
+	             {80,90,70}
+	             };
+Scanner sc = new Scanner(System.in);
 		 int key =1;
+		 do {
 		  switch (key) {
 		case 1:
-			double[][] marks = { {10,20,30},
-					             {40,50,60},
-					             {70,80,90}
-					             };
-			repo.add(new Student(101,"Ramesh", marks));
-			repo.add(new Student(102,"SureshS", marks));
-
+			repo.add(new Student(101,"Ramesh",marks1));
+			repo.add(new Student(102,"Rakesh",marks2));
+			
+          break;
 		case 2:
 			Student[] list = (Student[]) repo.findAll();   
 			print(list);   
@@ -31,6 +38,11 @@ public class StudentApplication {
 		default:
 			break;
 		}
+		  System.out.println("1 to Continue 2 to print 3 to exit");
+		  key = sc.nextInt();
+		 }while(key<=2);
+		 
+		 sc.close();
 	}
 
 	private static void print(Student[] list) {
@@ -47,7 +59,7 @@ public class StudentApplication {
 					 total =total+mark;
 				 }
 			 }
-			 System.out.println(total);
+			 System.out.println("Student Average"+total);
 			  }
 			  System.out.println("==============");
 		 }
