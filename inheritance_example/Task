@@ -1,0 +1,7 @@
+Create a Class Insurance 
+  => attribute=>
+calculatePremium();
+Create a Sub class VehicleInsurance  
+  =>attributes=>
+ calculatePremium();
+  

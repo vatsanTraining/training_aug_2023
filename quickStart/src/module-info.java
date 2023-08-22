@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author vatsa
+ *
+ */
+module quickStart {
+}
