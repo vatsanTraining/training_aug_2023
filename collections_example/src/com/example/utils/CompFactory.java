@@ -13,7 +13,7 @@ public class CompFactory {
 
 		case "cibilscore":
 			return new CibilScoreComparator();
-		case "loanAmount":
+		case "loanamount":
 			return new LoanAmountComparator();
 		default:
 			return null;
