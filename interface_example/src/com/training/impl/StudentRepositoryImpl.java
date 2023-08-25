@@ -67,4 +67,11 @@ public class StudentRepositoryImpl implements StudentRepository {
 	}
 
 
+	@Override
+	public Object findById(int id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 }

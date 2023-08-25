@@ -1,7 +1,10 @@
 package com.training.model;
 
 import java.util.Objects;
-
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 public class LoanApplication {
 
 
@@ -11,8 +14,10 @@ public class LoanApplication {
 	private double loanAmount;
 	
 	
+	
 	public LoanApplication() {
 		super();
+
 	}
 	public LoanApplication(int applicationNumber, String applicantName, double cibilScore, double loanAmount) {
 		super();

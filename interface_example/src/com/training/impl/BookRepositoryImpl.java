@@ -35,8 +35,20 @@ public class BookRepositoryImpl implements CrudRepository {
 
 	@Override
 	public boolean remove(int key) {
-		// TODO Auto-generated method stub
 		return false;
 	}
+	
+	//subtype should throw same as super type or its subclass exception
+	// but never a super class exception
+
+	// throwable => throwable , exception,...
+	// Exception -> throwable => not allowed
+	@Override
+	public Object findById(int id) throws Exception {
+
+		throw new Exception("Hi");
+	}
+	
+	
 
 }
