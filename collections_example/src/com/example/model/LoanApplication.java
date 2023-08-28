@@ -12,7 +12,6 @@ public class LoanApplication  implements Comparable<LoanApplication>{
 	
 	public LoanApplication() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public LoanApplication(int applicationNumber, String applicantName, double cibilScore, double loanAmount) {
 		super();
