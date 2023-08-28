@@ -19,7 +19,16 @@ public class Application {
 		
 		   LoanApplicationService service = new LoanApplicationService();
 
+		   service.add(new LoanApplication(1010, "Ramesh", 780, 100000));
+		   service.add(new LoanApplication(1020, "Suresh", 880, 200000));
+		   service.add(new LoanApplication(1020, "Suresh", 880, 200000));
+		   service.add(new LoanApplication(1030, "Anand", 580, 500000));
+		   service.add(new LoanApplication(1040, "Yash", 680, 700000));
+		   service.add(new LoanApplication(1060, "Basker", 780, 300000));
+
+
 	             List<LoanApplication> list = service.sortedByProp("applicantname");
+	             
 	             
 	             for(LoanApplication eachApplication:list) {
 	            	 System.out.println(eachApplication);

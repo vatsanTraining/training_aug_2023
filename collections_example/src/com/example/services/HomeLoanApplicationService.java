@@ -1,4 +1,4 @@
-package com.example;
+package com.example.services;
 
 import java.util.HashSet;
 import java.util.List;
@@ -10,7 +10,6 @@ import com.example.impl.CrudRepositoryImpl;
 import com.example.model.HomeLoanApplication;
 import com.example.model.LoanApplication;
 import com.example.model.LoanFile;
-import com.example.services.LoanApplicationService;
 import com.example.utils.LocationType;
 
 public class HomeLoanApplicationService extends LoanApplicationService {
@@ -18,6 +17,13 @@ public class HomeLoanApplicationService extends LoanApplicationService {
 	private CrudRepository<LoanApplication> repo;
 	
 	
+
+	public HomeLoanApplicationService(CrudRepository<LoanApplication> repo) {
+		super();
+		this.repo = repo;
+	}
+
+
 
 	public  HomeLoanApplicationService() {
 		super();

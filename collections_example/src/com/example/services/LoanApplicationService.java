@@ -27,20 +27,21 @@ public class LoanApplicationService {
 		
 		this.repo= new CrudRepositoryImpl();
 		
-		init();
-
+		}
+	
+		
+	public boolean add(LoanApplication entity) {
+		
+		return this.repo.add(entity)==1?true:false;
 	}
 	
-	private void init() {
-		repo.add(new LoanApplication(1010, "Ramesh", 780, 100000));
-		repo.add(new LoanApplication(1020, "Suresh", 880, 200000));
-		repo.add(new LoanApplication(1020, "Suresh", 880, 200000));
-		repo.add(new LoanApplication(1030, "Anand", 580, 500000));
-		repo.add(new LoanApplication(1040, "Yash", 680, 700000));
-		repo.add(new LoanApplication(1060, "Basker", 780, 300000));
-
+	public boolean add(LoanApplication ...applications ) {
 		
-
+		boolean result = false;
+		for (LoanApplication eachApplication : applications) {
+			result = this.add(eachApplication);
+		}
+		return result;
 	}
 	
 	public List<LoanApplication> sortedByProp(String prop){
@@ -105,7 +106,7 @@ public class LoanApplicationService {
 
 		for(LoanApplication eachApp:apps) {
 			
-			System.out.println(map.put(eachApp.getApplicantName(), eachApp.getLoanAmount()));
+          map.put(eachApp.getApplicantName(), eachApp.getLoanAmount());
 			
 		}
 		
