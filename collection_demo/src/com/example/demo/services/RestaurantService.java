@@ -55,8 +55,8 @@ public boolean add(Restaurant ...list) {
 		try {
 			return this.dao.findById(id);
 		} catch (Exception e) {
-			//throw e;
-			throw new RuntimeException(e.getMessage());
+			throw e;
+			//throw new RuntimeException(e.getMessage());
 		}
 	}
 	

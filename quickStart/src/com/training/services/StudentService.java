@@ -7,7 +7,7 @@ public class StudentService {
 	public static String allotGrade(Student student) {
 		
 		//System.out.println(number);
-		double mark = student.getMarkScored();
+		var  mark = student.getMarkScored();
 		
 		return allotGrade(mark);
 	}

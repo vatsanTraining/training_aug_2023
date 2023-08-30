@@ -1,16 +1,10 @@
 package com.example.demo.exceptions;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-
-
 
 public class ElementNotFoundException extends Exception {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 123L;
+private static final long serialVersionUID = 123L;
 
 	
 	private String message;
@@ -33,4 +27,5 @@ public class ElementNotFoundException extends Exception {
 	}
 	
 	
+
 }

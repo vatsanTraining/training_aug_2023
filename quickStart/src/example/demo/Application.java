@@ -15,7 +15,7 @@ public static void main(String[] args) {
 	 System.out.println("Mark Scored:=>"+shyam.getMarkScored());
 	 
 	 
-	 Teacher kanna = new Teacher(200,"Kanna","english");
+	 var  kanna = new Teacher(200,"Kanna","english");
 	 
 	         // String result =kanna.showResult(ram);
 //	          String updatedResult = result.toLowerCase();
@@ -29,6 +29,9 @@ public static void main(String[] args) {
 	          //For references to objects, you pass a copy of the reference 
 
 	 	     System.out.println("After Method Call =>"+ ram.getLastName());
+	 	     
+	 	     var age =56;
+	 	     
 
 }
                             

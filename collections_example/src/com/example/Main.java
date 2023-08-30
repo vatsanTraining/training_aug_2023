@@ -8,6 +8,7 @@ import com.example.model.HomeLoanApplication;
 import com.example.model.LoanApplication;
 import com.example.model.LoanFile;
 import com.example.services.HomeLoanApplicationService;
+import com.example.utils.LoanStatus;
 import com.example.utils.LocationType;
 
 public class Main {
@@ -18,11 +19,13 @@ public class Main {
 		
 		HomeLoanApplicationService  homeLoanService=new HomeLoanApplicationService();
 		
-		  Set<LoanFile> loans =homeLoanService.approveLoans();
+		homeLoanService.add(new HomeLoanApplication(1020, "Shiv", 789, 900000, LocationType.RURAL));
+		 
+		Set<LoanFile> loans =homeLoanService.approveLoans();
 		 
 		  for(LoanFile eachFile:loans) {
 			  
-			  System.out.println(eachFile);
+			  System.out.println("Data"+eachFile);
 		  }
 	}
 
