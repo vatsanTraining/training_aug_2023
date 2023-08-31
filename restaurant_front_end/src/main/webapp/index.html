@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Food Rush</title>
+<link href="styles/base.css" rel="stylesheet">
+
+
+<style type="text/css">
+
+/*  class selector
+*/
+.thumbnail{
+height: 50px;
+width:50px;
+border: 2px solid #0000FF;
+}
+/*  child selector
+*/
+ul>li{
+display: inline;
+}
+</style>
+</head>
+<body>
+
+
+<header>
+<h1>Food Rush</h1>
+
+<img src="images/logo.png" alt="company logo" class="thumbnail">
+
+<nav>
+
+	<ul>
+	<li><a href="addrestaurant.html">Add Restaurant</a></li>
+	<li><a href="showrestaurants.html">Show Restaurants</a></li>
+	<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+</header>
+
+<section style="background-color: #b2beb5">
+
+	<h4>About us</h4>
+	<p id="content"></p>
+</section>
+
+<footer>
+	<p>Designed by Ashbik sofware Solution Limited © 2022-2025</p>
+	<a href="mailTo:admin@abc.com">Contact Administrator</a>
+</footer>
+
+<script type="text/javascript" src="scripts/quickstart.js"></script>
+<script>
+app.show();
+app.attachEvents()
+</script>
+
+</body>
+</html>

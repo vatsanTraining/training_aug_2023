@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Restaurant</title>
+<link href="styles/base.css" rel="stylesheet">
+<script type="text/javascript" src="scripts/validation.js"></script>
+
+</head>
+<body>
+<form action="showrestaurants.html" method="post" id="form">
+
+		<div>
+			<label for="id">Id</label> 
+			<input type="text" name="id" required="required" id="id">
+		</div>
+		<div>
+			<label for="restaurantName">Restaurant Name</label>
+			 <input type="text" name="restaurantName" id="restaurantName" required="required">
+			  <span id="nameFldErr"></span>
+		</div>
+		<div>
+			<label for="cuisine">Cuisine</label> 
+			<select name="cusine" id="cuisine">
+			<option value="Veg" selected="selected">Vegeterian</option>
+			<option value="Nonveg">Non Veg</option>
+			<option value="Italian">Italian</option>
+			<option value="Spanish">Spanish</option>
+			<option value="Snax">Snax</option>
+			
+			</select>
+					</div>
+		<div>
+			<label for="openingDate">Opening Date</label>
+			 <input type="date" name="openingDate" id="openingDate">
+		</div>
+		<div>
+			<label for="rating">Rating</label>
+			 <input type="number" name="rating" min="1" max="5" step="1" id="rating">
+		</div>
+		
+				<div>
+			<input type="reset" value="Clear">
+			<input type="submit" value="Add">
+			
+		</div>
+		
+
+	</form>
+	
+	<script type="text/javascript">
+	  valid.attachEvents();
+	</script>
+</body>
+</html>

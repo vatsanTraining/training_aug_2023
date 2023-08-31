@@ -1,0 +1,45 @@
+@charset "ISO-8859-1";
+
+h1,h3{
+	
+	text-align: center;
+	color: #00FF00;
+}
+
+table{
+	
+	border: 1px solid #0000ff;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*  Multiple selector
+*/
+
+tr,td,th{
+	
+		border: 1px solid #0000ff;
+	
+}
+
+thead {
+	background-color: #bcbcb2;
+}
+/*  Name selector
+*/
+tbody {
+	background-color: #ddddb4;
+}
+/*  Attribute selector with pseudo
+*/
+input[type='text']:focus {
+	
+	border: 1 px solid blue;
+	background-color: #cceeff;
+}
+
+li{
+	
+	margin: 10px 10px;
+}
