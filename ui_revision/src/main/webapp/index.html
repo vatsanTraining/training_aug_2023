@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Billa Bakery</title>
+<link rel="stylesheet" href="styles/style.css">
+
+<style type="text/css">
+
+.centerText{
+text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+
+<h1 class="centerText">Billa Bakery</h1>
+<h2 class="centerText">WhiteField</h2>
+<h4 class="centerText" id="pincode"></h4>
+
+<section>
+<h4>Places to Visit</h4>
+
+<ul>
+<li>Charminar</li>
+<li>SriSailam</li>
+<li>Necklace Road</li>
+<li>Karachi Bakery</li>
+<li style="display: none;" id="newItem"></li>
+</ul>
+
+<button>Add More 😍</button>
+</section>
+<button id="likeBtn">Like</button><span id="count" class="styleSpan"></span>
+
+<script type="text/javascript" src="scripts/demo.js"></script>
+<script type="text/javascript">
+demo.addPincode()
+demo.attachClickEvent()
+</script>
+</body>
+</html>

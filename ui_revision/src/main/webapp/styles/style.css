@@ -1,0 +1,25 @@
+@charset "ISO-8859-1";
+
+.styleSpan{
+	
+	font-family: 'Arial';
+	font-size: 1.2em;
+	background-color: #00ff00;
+	margin-left: 40px;
+}
+
+
+table {
+	
+	border: 2px solid #00ffcc;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+tr,td,th{
+	
+		border: 1px solid #00ff00;
+	
+}

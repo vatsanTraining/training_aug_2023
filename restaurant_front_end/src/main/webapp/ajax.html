@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+
+function load(url){
+
+	  xhr = new XMLHttpRequest();
+    
+    xhr.open("GET",url,true);
+    
+    xhr.onreadystatechange=processResponse;
+
+    xhr.send(null);
+
+ }
+
+function processResponse(){
+
+	    if(xhr.readyState == 4 && xhr.status == 200)
+	    {
+           var element = document.getElementById("placeHolder");
+
+           element.innerHTML= xhr.responseText;
+        }
+
+}
+
+function handleClick(){
+
+	var anchors = document.getElementsByTagName("a");
+
+	for(let i =0;i<anchors.length;i++)
+	{
+		anchors[i].addEventListener("click", function(event){
+	    
+			   event.preventDefault();
+	         	
+			   var url = this.getAttribute("href")
+	         	
+			   load(url)
+			   }
+    )
+}
+}
+
+</script>
+<body>
+
+	<ul>
+	<li><a href="addrestaurant.html">Add Restaurant</a></li>
+	<li><a href="showrestaurants.html">Show Restaurants</a></li>
+	<li><a href="contact.html">Contact</a></li>
+	</ul>
+
+
+<section id="placeHolder">
+
+</section>
+
+<script type="text/javascript">
+handleClick()</script>
+</body>
+</html>
