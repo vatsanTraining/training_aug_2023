@@ -6,4 +6,5 @@
  *
  */
 module polymorphism_demo {
+	requires polymorphism;
 }

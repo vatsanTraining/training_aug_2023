@@ -19,6 +19,14 @@
 
 }
 
+app.arrayOfJson = function(json){
+	
+	json.map((ele,idx)=>{
+		console.log(ele.name)
+		console.log(idx)
+	})
+}
+
 app.toJson =function(string){
 	
 	var stringTojson = JSON.parse(string)
@@ -29,7 +37,9 @@ app.toJson =function(string){
 
 }
 
-app.plainStringToJson=function(string){
+app.plainStringToJson=function(){
+	
+	var string ="id:101,name:rohanKumar,salary:6000"
 	
 	const temp = string.split(",");
 			const obj = {}
@@ -46,10 +56,12 @@ app.plainStringToJson=function(string){
 
 }
 		
-	app.plainStringToJson("id:101,name:rohanKumar,salary:6000")
 
 	app.parseToString({name:"ram",mark:90})
 
 	app.toJson('{"firstName":"ram", "mark":90, "city":"Chennai"}')
 	
+	app.arrayOfJson([{name:"lalith",mark:90},{name:"lakshya",mark:80}])
+	
+	app.plainStringToJson()
 

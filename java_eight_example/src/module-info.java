@@ -1,4 +1,3 @@
-
 /**
  * 
  */
@@ -6,5 +5,5 @@
  * @author vatsa
  *
  */
-module thread_example {
+module java_eight_example {
 }
