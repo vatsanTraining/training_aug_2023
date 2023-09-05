@@ -1,0 +1,7 @@
+Create a Java class Customer (customerId,customerName,dateOfBirth,city,pincode);
+Store the details of the customer in a map with Map<Integer,Customer>
+Create a DaoImpl which returns the populated map
+Use the stream API to return the List of all Customers.
+Retrieve the List of CustomerName and restrict to first 3 Names only
+
+

@@ -11,9 +11,9 @@ public class Main {
 				
 		Display<Double> print = (arg) -> System.out.println(arg *2.0);
 		
-		
 		print.show(45.0);
 		
+		System.out.println(print.greet());
 		
 		Predicate<Double> testAge = (var age) ->  age >18;
 		
