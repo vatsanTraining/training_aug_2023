@@ -1,6 +1,7 @@
 package com.example;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -32,6 +33,9 @@ public class Application {
 			 
 			 System.out.println(eachItem.getKey() + ","+ eachItem.getValue());
 		 }
+		
+		 List<String> names = List.of("Ramesh","Suresh","Magesh","Rajesh");
+		 
 		
 	}
 

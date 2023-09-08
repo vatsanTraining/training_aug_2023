@@ -13,12 +13,15 @@ public class InvoiceStreamService {
 	
 	Map<String,List<Invoice>> invoiceMap;
 
-	List<Invoice> invList ;
+	List<Invoice> invList;
+	
+	
 	public InvoiceStreamService(Map<String, List<Invoice>> invoiceMap) {
 		super();
 		this.invoiceMap = invoiceMap;
+		
 		this.invList=invoiceMap.values().stream().flatMap(e -> e.stream()).collect(toList());
-
+		
 	}
 	
 	

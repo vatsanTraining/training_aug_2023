@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+ 
+ <bean id="grtBean" class="com.example.demo.services.HelloService"></bean>
+ 
+ 
+ <bean id="service" class="com.example.demo.services.TransalatorService">
+   <constructor-arg name="transalator" ref="hindi"></constructor-arg> 	
+ </bean>
+ 
+ 
+<!--  <bean id="service" class="com.example.demo.services.TransalatorService"> -->
+<!--    <property name="transalator" ref="hindi"></property> 	 -->
+<!--  </bean> -->
+ 
+<!--  <bean id="hindi" class="com.example.demo.model.HindiTransalator" lazy-init="true"></bean> -->
+ 
+<!--  <bean id="telugu" class="com.example.demo.model.TeluguTransalator" lazy-init="true" ></bean> -->
+
+
+ <bean id="hindi" class="com.example.demo.model.HindiTransalator"></bean>
+ 
+ <bean id="telugu" class="com.example.demo.model.TeluguTransalator"></bean>
+ 
+ <bean id="ram" class="com.example.demo.model.Employee">
+ 
+  <constructor-arg name="employeeName" value="Ram Babu"></constructor-arg>
+  <constructor-arg name="phoneNumber" value="9899999"></constructor-arg>
+   <constructor-arg name="address" ref="offAddress"></constructor-arg>
+ 
+ </bean>
+ 
+ <bean id="offAddress" class="com.example.demo.model.Address">
+ <property name="line1" value="Gandhi Nagar"></property>
+ <property name="line2" value="pocket -1 sector 223"></property>
+  <property name="city" value="Jalandhar"></property>
+ <property name="pincode" value="600044"></property>
+ 
+ </bean>
+ 
+ 
+</beans>
+
