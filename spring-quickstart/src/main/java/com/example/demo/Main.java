@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.example.demo.model.Employee;
+import com.example.demo.model.Invoice;
 import com.example.demo.services.HelloService;
 import com.example.demo.services.TransalatorService;
 
@@ -25,6 +26,7 @@ public class Main {
 		 
 		 System.out.println(emp);
 		 
+		 System.out.println(ctx.getBean(Invoice.class));
 		ctx.close();
 	}
 

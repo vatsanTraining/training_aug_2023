@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    password: srivatsan
+    url: jdbc:mysql://localhost:3306/sys
+    username: root
