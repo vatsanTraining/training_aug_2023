@@ -16,7 +16,6 @@ const AddLoan = () => {
         event.preventDefault()
        await addLoan(loan)
 
-             console.log('Successfully Added loan')
              setMessage('Successfully Added loan')
     }
 

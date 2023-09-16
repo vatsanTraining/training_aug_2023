@@ -22,7 +22,6 @@ const EditDeposit = () => {
  },[key]);
 
  const handleSubmit = () => {
-console.log(deposit);
   update(key,deposit);
        navigate('/')
  }
